@@ -1,31 +1,52 @@
+---
+---
 # Halyard
 
-*codecov icon here*
-*travis icon here*
-
-Halyard is an extremely horizontally scalable triple store with support for named graphs, designed for integration of extremely large semantic data models and for storage and [SPARQL 1.1][] querying of complete Linked Data universe snapshots. Halyard implementation is based on [Eclipse RDF4J][] framework and [Apache HBase][] database, and it is completely written in Java.
+Halyard is an extremely horizontally scalable [Triplestore][] with support for [Named Graphs][], designed for integration of extremely large [Semantic Data Models][], and for storage and [SPARQL 1.1][] querying of the whole [Linked Data][] universe snapshots. Halyard implementation is based on [Eclipse RDF4J][] framework and [Apache HBase][] database, and it is completely written in Java.
 
 *Author: [Adam Sotona](mailto:adam.sotona@merck.com)*
 
+[Triplestore]: https://en.wikipedia.org/wiki/Triplestore
+[Named Graphs]: https://en.wikipedia.org/wiki/Named_graph
+[RDF]: https://en.wikipedia.org/wiki/Resource_Description_Framework
+[Semantic Data Models]: https://en.wikipedia.org/wiki/Semantic_data_model
 [SPARQL 1.1]: http://www.w3.org/TR/sparql11-query/
+[Linked Data]: https://en.wikipedia.org/wiki/Linked_data
 [Eclipse RDF4J]: http://rdf4j.org
 [Apache HBase]: http://hbase.apache.org
 
-## Get involved
+---
+Important Links
 
-*Discussion group: <https://groups.google.com/d/forum/halyard-users>*
+*Home Page: <https://merck.github.io/Halyard>*  
+*GitHub Repository: <https://github.com/Merck/Halyard>*  
+*Discussion Group: <https://groups.google.com/d/forum/halyard-users>*  
+*Integration Builds: <https://travis-ci.org/Merck/Halyard>*  
+*Test Coverage Reports: <https://codecov.io/gh/Merck/Halyard>*
 
-## Repository contents
+[&#9650;](#)
 
- * **Halyard-Common** - a library for direct mapping between an RDF data model and Apache HBase
+Repository Content
+------------------
+
+ * **Halyard-Common** - a library for direct mapping between RDF data model and Apache HBase
  * **Halyard-Strategy** - a generic parallel asynchronous implementation of RDF4J Evaluation Strategy
  * **Halyard-SAIL** - an implementation of the RDF4J Storage and Inference Layer on top of Apache HBase
  * **Halyard Tools** - a set of command line and Apache Hadoop MapReduce tools for loading, updating, querying, and exporting the data with maximum performance
- * **Halyard-SDK** - a distributable bundle of Eclipse RDF4J and Halyard for command line use on an Apache Hadoop cluster with configured HBase
+ * **Halyard-SDK** - a distributable bundle of Eclipse RDF4J and Halyard for command line use on an Apache Hadoop cluster with configured HBase.
  * **Halyard-WebApps** - a re-distribution of Eclipse RDF4J Web Applications (RDF4J-Server and RDF4J-Workbench), patched and enhanced to include Halyard as another RDF repository option
 
-## Build Instructions
+[&#9650;](#)
 
+Architecture Diagram
+--------------------
+
+![Halyard Architecture Diagram](img/architecture.png)
+
+[&#9650;](#)
+
+Build Instructions
+------------------
 Build environment prerequisites are:
 
  * Linux or Mac computer
@@ -36,8 +57,10 @@ In the Halyard project root directory execute command: `mvn package`
 
 Optionally you can build Halyard from NetBeans or other Java Development IDE.
 
-## Runtime Requirements
+[&#9650;](#)
 
+Runtime Requirements
+--------------------
 Halyard is expected to run on an Apache Hadoop cluster node with configured Apache HBase client. Apache Hadoop and Apache HBase components are not bundled with Halyard. The runtime requirements are:
 
  * Apache Hadoop version 2.5.1 or higher
@@ -45,6 +68,8 @@ Halyard is expected to run on an Apache Hadoop cluster node with configured Apac
  * Java 8 Runtime
 
 *Note: Recommended Apache Hadoop distribution is Hortonworks Data Platform (HDP) version 2.4.2*
+
+[&#9650;](#)
 
 Halyard SDK
 -----------
